@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Notes on Structured Query Language</title>
+</head>
+<body>
+  
+<h1>Structured Query Language</h1>
+  <p>SQL is the standard language for storing, manupulating, and retrieving data in databases.</p>
+  
+<h2>What is SQl?</h2>
+  <p>Lets you access and manipulate databases</p>
+  <p>Became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</p>
+  
+<h2>What can SQL do?</h2>
+<ul>
+	<li>Execute queries against a database</li>
+  <li>Retrieve data from a database</li>
+  <li>Insert records in a database</li>
+  <li>Update records in a database</li>
+  <li>Delete records from a database</li>
+  <li>Create new databases</li>
+  <li>Create new tables in a database</li>
+  <li>Create stored procedures in a database</li>
+  <li>Create views in a database</li>
+  <li>Set permissions on tables, procedures and views</li>
+</ul>
+
+<h2>SQL is a Standard</h2>
+  <p>There are three different verions of the SQL Language.</p>
+  <p>To be compliant with the ANSI standard, they all support at least the following major commands:</p>
+    <ul>
+      <li><code>SELECT</code></li>
+      <li><code>UPDATE</code></li>
+      <li><code>INSERT</code></li>
+      <li><code>WHERE</code></li>
+    </ul>
+  <p>Most SQL database programs alshave their own proprietary extensions in addition to the SQL standard.</p>
+  
+<h2>Using SQL in your own website</h2>
+  <p>To build a web site that shows data from a database you will need the following:<br>
+  <ul>
+    <li>A RDBMS database program (Microsoft Access, SQL Server, MySQL)</li>
+    <li>A server-side scripting language, like PHP or ASP</li>
+    <li>Use SQL to get the data you want</li>
+    <li>Use HTML / CSS to style the page</li>
+  </ul>
+  </p>
+
+<h2>Relational Database Management System (RDBMS)</h2>
+	<p>is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.</p>
+	<p>The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.</p>
+	<p>Every table is broken up into smaller entities called fields. A field is a column in a table that is designed to maintain specific information about every record in the table.</p>
+	<p>A record, also called a row, is each individual entry that exists in a table. A record is a horizontal entity in a table.</p>
+	<p>A column is a vertical entity in a table that contains all information associated with a specific field in a table.</p>
+
+<h1>SQL Syntax</h1>
+
+<h2>Database tables</h2>
+	<p>A database most often contains one or more tables.</p>
+
+<h2>SQL Statements</h2>
+	<p>Most of the actions you need to perform on a database are done with SQL statements.</p>
+	<p>The following SQL statement selects all the records in the "Customers" table:<br><code>SELECT * FROM Customers;</code></p>
+	<p>SQL keywords are not Case Sensitive: <code>select</code> is the same as <code>SELECT</code></p>
+
+<h2>Semicolon after SQL Statements</h2>
+	<p>Some database systems require a semicolon at the end of each SQL statement.</p>
+	<p>Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
+
+<h2>Some Important SQL Commands</h2>
+<ul>
+	<li><code style="color:red; background-color:LightGray"><b>SELECT</b></code> extracts data from a database</li>
+	<li><code style="color:red; background-color:LightGray"><b>UPDATE</b></code> updates data in a database</li>
+	<li><code style="color:red; background-color:LightGray"><b>DELETE</b></code> deletes data from a database</li>
+	<li><code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code> inserts new data into a database</li>
+	<li><code style="color:red; background-color:LightGray"><b>CREATE DATABASE</b></code> creates a new database</li>
+	<li><code style="color:red; background-color:LightGray"><b>ALTER DATABASE</b></code> modifies a database</li>
+	<li><code style="color:red; background-color:LightGray"><b>CREATE TABLE</b></code> creates a new table</li>
+	<li><code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> modifies a table</li>
+	<li><code style="color:red; background-color:LightGray"><b>DROP TABLE</b></code> deletes a table</li>
+	<li><code style="color:red; background-color:LightGray"><b>CREATE INDEX</b></code> creates an index (search key)</li>
+	<li><code style="color:red; background-color:LightGray"><b>DROP INDEX</b></code> deletes an index</li>
+</ul>
+</body>
+</html>
