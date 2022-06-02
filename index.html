@@ -82,5 +82,143 @@
 	<li><code style="color:red; background-color:LightGray"><b>CREATE INDEX</b></code> creates an index (search key)</li>
 	<li><code style="color:red; background-color:LightGray"><b>DROP INDEX</b></code> deletes an index</li>
 </ul>
+
+<h1>SQL SELECT Statement</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>SELECT</b></code> statement is used to select data from a database.</p>
+	<p>The data returned is stored in a result table, called the result-set.</p>
+
+<h2>SELECT Syntax</h2>
+	<p><code><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>column1 , column2</code><br><code><code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name;</code></p>
+	<p>In the example above column 1 and column 2 are the field names of the table you want to select data from. If you want to select all the field available in the table, use this syntax:<br><code style="color:red; background-color:LightGray"><b>SELECT</b></code> 
+	* <code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name;</code></p>
+
+<h1>SQL SELECT DISTINCT Statement</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>SELECT DISTINCT</b></code> Statement statement is used to return only distinct (different) values.</p>
+	<p>Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.</p>
+
+<h2>SELECT DISTINCT Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT DISTINCT</b></code> <code>column1, column2</code><br><code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>table_name;</code></p>
+
+<h2>SQL WHERE Clause</h2>
+	<p>The <code style="color:red; background-color:LightGray"><b>WHERE</b></code> Clause is used to filter records.</p>
+	<p>It is used to extract only records to fulfill a specific condition.</p>
+	<p><code style="color:red; background-color:LightGray"><b>WHERE</b></code> Syntax Example:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code><code> column1, column2</code><br>
+	<code style="color:red; background-color:LightGray"><b>from</b></code><code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code><code> condition;</code></p>
+
+<h2>Text vs Numeric Fields</h2>
+	<p>SQL requires single quotes around text values however, most database systems will also allow double quotes.</p>
+	<p>Numeric fields should not be encloses in quotes:</p>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code style="color:red; background-color:LightGray"><b>FROM</b></code><code>Customers<br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code><code> CustomerID=1;</code></p>
+
+<h2>Operators that can be used in the WHERE clause:</h2>
+<table>
+	<tr>
+		<th>Operator</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>=</td>
+		<td>Equal</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>Greater than</td>
+	</tr>
+	<tr>
+		<td><</td>
+		<td>Less than</td>
+	</tr>
+	<tr>
+		<td>>=</td>
+		<td>Greater tham or equal to</td>
+	</tr>
+	<tr>
+		<td><=</td>
+		<td>Less than or equal to</td>
+	</tr>
+	<tr>
+		<td><></td>
+		<td>Not equal, can also be wrtten as !=</td>
+	</tr>
+	<tr>
+		<td>BETWEEN</td>
+		<td>Between certain range</td>
+	</tr>
+	<tr>
+		<td>LIKE</td>
+		<td>Search for a pattern</td>
+	</tr>
+	<tr>
+		<td>IN</td>
+		<td>To specify multiple possible values for a column</td>
+	</tr>
+</table>
+
+<h1>SQL AND, OR and NOT Operators</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>WHERE</b></code> clause can be combined with <code style="color:red; background-color:LightGray"><b>AND</b></code>, <code style="color:red; background-color:LightGray"><b>OR</b></code>, and <code style="color:red; background-color:LightGray"><b>NOT</b></code> operators.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>AND</b></code> and <code style="color:red; background-color:LightGray"><b>OR</b></code> operators are used to filter records based on more than one condition:</p>
+		<ul>
+			<li>The <code style="color:red; background-color:LightGray"><b>AND</b></code> operator displays a record if all the conditions separated by <code style="color:red; background-color:LightGray"><b>AND</b></code> are TRUE.</li>
+			<li>The <code style="color:red; background-color:LightGray"><b>OR</b></code> operator displays a record if any of the conditions separated by <code style="color:red; background-color:LightGray"><b>OR</b></code> is TRUE.</li>
+			<li>The <code style="color:red; background-color:LightGray"><b>NOT</b></code> operator displays a record if the condition(s) is NOT TRUE.</li>
+		</ul>
+
+<h2>AND Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code><code> column1, column2</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition1</code> <code style="color:red; background-color:LightGray"><b>AND</b></code><code> condition2</code> <code style="color:red; background-color:LightGray"><b>AND</b></code><code> condition3;</code>
+	</p>
+
+<h2>OR Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code><code> column1, column2</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition1</code> <code style="color:red; background-color:LightGray"><b>OR</b></code><code> condition2</code> <code style="color:red; background-color:LightGray"><b>OR</b></code><code> condition3;</code>
+	</p>
+
+<h2>NOT Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code><code> column1, column2</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code style="color:red; background-color:LightGray"><b>NOT</b></code> <code> condition1;</code> 
+	</p>
+
+<h1>ORDER BY Keyword</h1>
+	<p>The ORDER BY keyword is used to sort the result-set in ascending or descending order.</p>
+	<p>The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.</p>
+
+<h2>ORDER BY Example</h2>	
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code> Customers</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code><code> Country;</code>
+	</p>
+
+<h2>ORDER BY DESC Example</h2>	
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code> Customers</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code><code> Country</code><code style="color:red; background-color:LightGray"><b>DESC</b>;</code>
+	</p>
+
+<h2>ORDER BY Examples</h2>	
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code style="color:red; background-color:LightGray"><b>FROM</b></code><code> Customers</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code><code> Country, CustomerName;</code>
+	</p>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code style="color:red; background-color:LightGray"><b>FROM</b></code><code> Customers</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code><code> Country <code style="color:red; background-color:LightGray"><b>ASC</b></code>, <code>CustomerName</code> <code style="color:red; background-color:LightGray"><b>DESC</b></code>;
+	</p>
+
+<h1>INSERT INTO Statement</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code> statement is used to insert new records in a table.</p>
+
+<h2>INSERT INTO Syntax</h2>
+	<p>It is possible to write the INSERT INTO statement in two ways:</p>
+	<p>Specify both the column names and the values to be inserted. (as shown below)</p>
+	<p><code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code><code> table_name (column1, column2, column3)<br>
+	The <code style="color:red; background-color:LightGray"><b>VALUES</b></code><code>(value1, value2, value3);</code>
+	</p>
+	<p>Or If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table.</p>
+	<p><code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code><code> table_name<br>
+	The <code style="color:red; background-color:LightGray"><b>VALUES</b></code><code>(value1, value2, value3);</code>
+	</p>
+
 </body>
 </html>
