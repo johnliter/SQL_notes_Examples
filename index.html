@@ -227,6 +227,7 @@
 
 <h2>How to test for NULL Values</h2>
 	<p>It is not possible to test for NULL values with comparison operators.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>IS NULL</b></code> operator is used to test for empty values (NULL values).</p>
 	<p>We will have to use the <code style="color:red; background-color:LightGray"><b>IS NULL</b></code> and <code style="color:red; background-color:LightGray"><b>IS NOT NULL</b></code> operators</p>
 	<p>IS NULL Syntax Example:<br>
 	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>column_names</code><br>
@@ -241,7 +242,26 @@
 	<p>Always use IS NULL to look for NULL values.</p>
 
 <h1>UPDATE Statement</h1>
-	
+	<p>The <code style="color:red; background-color:LightGray"><b>UPDATE</b></code> statement is used to modify the existing records in a table.</p>
+	<p>UPDATE Syntax Example:<br>
+	<code style="color:red; background-color:LightGray"><b>UPDATE</b></code><code> table name</code><br>
+	<code style="color:red; background-color:LightGray"><b>SET</b></code><code> column1 = value1, column2 = value2</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code><code> condition;</code>
+	</p>
+	<p>Be aware if you omit the WHERE clause, all records in the table will be updated!</p>
+
+<h1>DELETE Statement</h1>
+	<p>The DELETE statement is used to delete existing records in a table.</p>
+	<p>DELETE Syntax Example:<br>
+	<code style="color:red; background-color:LightGray"><b>DELETE FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>where</b></code><code> condition:</code>
+	</p>
+	<p>It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:<br>
+	<code style="color:red; background-color:LightGray"><b>DELETE FROM</b></code><code> table name;</code>
+	</p>
+
+<h1>SELECT TOP Clause</h1>
+
+
 
 </body>
 </html>
