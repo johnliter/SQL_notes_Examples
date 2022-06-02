@@ -220,5 +220,28 @@
 	The <code style="color:red; background-color:LightGray"><b>VALUES</b></code><code>(value1, value2, value3);</code>
 	</p>
 
+<h1>NULL Value</h1>
+	<p>A field with a NULL value is a field with no value.</p>
+	<p>If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field. Then, the field will be saved with a NULL value.</p>
+	<p>A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation.</p>
+
+<h2>How to test for NULL Values</h2>
+	<p>It is not possible to test for NULL values with comparison operators.</p>
+	<p>We will have to use the <code style="color:red; background-color:LightGray"><b>IS NULL</b></code> and <code style="color:red; background-color:LightGray"><b>IS NOT NULL</b></code> operators</p>
+	<p>IS NULL Syntax Example:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>column_names</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>column_name</code> <code style="color:red; background-color:LightGray"><b>IS NULL</b></code><code>;</code>
+	</p>
+	<p>IS NOT NULL Syntax Example:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>column_names</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>column_name</code> <code style="color:red; background-color:LightGray"><b>IS NOT NULL</b></code><code>;</code>
+	</p>
+	<p>Always use IS NULL to look for NULL values.</p>
+
+<h1>UPDATE Statement</h1>
+	
+
 </body>
 </html>
