@@ -260,7 +260,384 @@
 	</p>
 
 <h1>SELECT TOP Clause</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>SELECT TOP</b></code> clause is used to specify the number of records to return.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>SELECT TOP</b></code> clause is useful on large tables with thousands of records, because returning a large number of records can impact performance.</p>
+	<p>Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses FETCH FIRST n ROWS ONLY and ROWNUM.</p>
 
+<h2>Example Syntax for Different SQL Langauages</h2>
+	
+	<h3>SQL Server / MS Access Syntax</h3>
+		<p><code style="color:red; background-color:LightGray"><b>SELECT TOP</b></code> <code> number|percent column_name(s)</code><br>
+		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+		<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+		</p>
+
+	<h3>MySQL Syntax</h3>
+		<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+		<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition</code><br>
+		<code style="color:red; background-color:LightGray"><b>LIMIT</b></code> <code> number;</code>
+		</p>
+
+	<h3>Oracle 12 Syntax</h2>
+		<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+		<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code> <code> column_name(s)</code><br>
+		<code style="color:red; background-color:LightGray"><b>FETCH FIRST</b></code> <code> number ROWS ONLY;</code>
+		</p>
+
+	<h3>Older Oracle Syntax</h3>
+		<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+		<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> ROWNUM <= number;</code>
+		</p>
+
+	<h3>Older Oracle Syntac with ORDER BY</h3>
+		<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> *</code><br>
+		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>(</code><code style="color:red; background-color:LightGray"><b>SELECT</n></code> <code> column_name(s)</code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>ORDER BY</b></code> <code> column_name(s))</code><br>
+		<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> ROWNUM <= number;</code>
+		<p>
+
+<h1>MIN() and MAX() Fucntions</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>MIN()</b></code> function returns the smallest value of the selected column.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>MAX()</b></code> function returns the largest value of the selected column.</p>
+
+<h2>Examples:</h2>
+	<p>MIN() Syntax:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> MIN(column_name)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+
+	<p>MAX() Syntax:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> MAX(column_name)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+
+<h1>COUNT(), AVG() and SUM() Functions</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>COUNT()</b></code> function returns the number of rows that matches a specified criterion.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>AVG()</b></code> function returns the average value of a numeric column. </p>
+	<p>The <code style="color:red; background-color:LightGray"><b>SUM()</b></code> function returns the total sum of a numeric column. </p>
+
+<h2>Examples:</h2>
+	<p>COUNT() Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT COUNT</b></code> <code>(column_name)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b><.code> <code> table_name</code>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+
+	<p>AVG() Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> AVG(column_name)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+
+	<p>SUM() Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> SUM(column_name)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br> 
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;
+	</p>
+
+<h1>LIKE Operator</h1>
+	<p>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
+	<p>There are two wildcards often used in conjunction with the LIKE operator: the percent sign (%) represents zero, one, or multiple characters, the underscore sign (_) represents one, single character</p>
+	<p>MS Access uses an asterisk (*) instead of the percent sign (%), and a question mark (?) instead of the underscore (_).</p>
+	<p>The percent sign and the underscore can also be used in combinations!
+	<p>You can also combine any number of conditions using AND or OR operators.</p>
+
+<h2>LIKE Syntax:</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column1, column2</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> columnn</code> <code style="color:red; background-color:LightGray"><b>LIKE</b></code> <code> pattern;</code>
+	</p>
+
+<h2>Examples using LIKE operator with "%" and "_" wildscards:</h2>
+	<table>
+		<tr>
+			<th>Operator</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE 'a%'</td>
+			<td>Finds any values that start with "a"</td>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE '%a'</td>
+			<td>Finds any values that end with "a"</td>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE '%or%'</td>
+			<td>Finds any values that have "or" in any position</td>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE '_r%'</td>
+			<td>Finds any values that have "r" in the second position</td>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE 'a_%'</td>	
+			<td>Finds any values that start with "a" and are at least 2 characters in length</td>
+		</tr>
+		<tr>
+			<td>WHERE CustomerName LIKE 'a__%'</td>
+			<td>Finds any values that start with "a" and are at least 3 characters in length</td>
+		</tr>
+		<tr>
+			<td>WHERE ContactName LIKE 'a%o'</td>
+			<td>Finds any values that start with "a" and ends with "o"</td>
+		</tr>
+	</table>
+
+<h1>Wildcards</h1>
+	<p>A wildcard character is used to substitute one or more characters in a string.</p>
+	<p>Wildcard characters are used with the LIKE operator. The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
+
+<h2>Microsoft Access Wildcards</h2>
+	<table>
+		<tr>
+			<th>Symbol</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>*</td>
+			<td>Represents zero or more characters</td>
+		</tr>
+		<tr>
+			<td>?</td>
+			<td>Represents a single character</td>
+		</tr>
+		<tr>
+			<td>[]</td>
+			<td>Represents any single character within the brackets</td>
+		</tr>
+		<tr>
+			<td>!</td>
+			<td>Represents any character not in the brackets</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td>Represents any single character within the specified range</td>
+		</tr>
+		<tr>
+			<td>#</td>
+			<td>Represents any single numeric character</td>
+		</tr>
+	</table>
+
+<h2>SQL Server Wildcards</h2>
+	<table>
+		<tr>
+			<th>Symbol</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>%</td>
+			<td>Represents zero or more characters</td>
+		</tr>
+		<tr>
+			<td>_</td>
+			<td>Represents a single character</td>
+		</tr>
+		<tr>
+			<td>[]</td>
+			<td>Represents any single character within the brackets</td>
+		</tr>
+		<tr>	
+			<td>^</td>
+			<td>Represents any character not in the brackets</td>
+		<tr>
+			<td>-</td>
+			<td>Represents any single character within the specified range</td>
+		</tr>
+	</table>
+
+<h1>IN Operator</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>IN</b></code> operator allows you to specify multiple values in a <code style="color:red; background-color:LightGray"><b>WHERE</b></code> clause.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>IN</b></code> operator is a shorthand for multiple <code style="color:red; background-color:LightGray"><b>OR</b></code> conditions.</p>
+
+<h2>IN Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b>,/code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code <code> column_name</code> <code style="color:red; background-color:LightGray"><b>IN</b></code> <code> (value1, value2);</code>
+	</p>
+
+<h2>or can be:</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code?column_name</code> <code style="color:red; background-color:LightGray"><b>IN</b></code> <code> (<code style="color:red; background-color:LightGray"><b>SELECT</b></code> STATEMENT);</code>
+	</p>
+
+<h1>BETWEEN Operator</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> operator selects values within a given range.</p>
+	<p>The values can be numbers, text, or dates.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> operator is inclusive: begin and end values are included.</p>
+
+<h2>BETWEEN Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> column_name</code> <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> <code> value1</code> <code style="color:red; background-color:LightGray"><b>AND</b></code> <code> value2;</code>
+	</p>
+
+<h1>Aliases</h1>
+	<p>SQL aliases are used to give a table, or a column in a table, a temporary name.</p>
+	<p>Aliases are often used to make column names more readable.</p>
+	<p>An alias only exists for the duration of that query.</p>
+	<p>An alias is created with the <code style="color:red; background-color:LightGray"><b>AS</b></code> keyword.</p>
+
+<h2>Alias Column Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name</code> <code style="color:red; background-color:LightGray"><b>AS</b></code> <code> alias_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name;</code>
+	</p>
+
+<h2>Alias Table Syntax</h2>
+	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>AS</b></code> <code> alias_name;</code>
+	</p>
+
+<h1>Joins</h1>
+	<p>A <code style="color:red; background-color:LightGray"><b>JOIN</b></code> clause is used to combine rows from two or more tables, based on a related column between them.</p>
+
+<h2>There are different Types of JOINs</h2>
+
+<h3><code style="color:red; background-color:LightGray"><b>(INNER) JOIN</b></code>: Returns records that have matching values in both tables</h3>
+	<p>The <code style="color:red; background-color:LightGray"><b>INNER JOIN</b></code> keyword selects records that have matching values in both tables.</p>
+	<p>Syntax:<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM </b></code> <code> table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>INNER JOIN </b></code> <code> table2</code><br>
+	<code style="color:red; background-color:LightGray"><b>ON</b></code> <code>  table1.column_name = table2.column_name;</code>
+	<p>
+
+<h3><code style="color:red; background-color:LightGray"><b>LEFT (OUTER) JOIN</b></code>: Returns all records from the left table, and the matched records from the right table</h3>
+	<p>The <code style="color:red; background-color:LightGray"><b>LEFT JOIN</b></code> keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code< <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code< <code>  table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>LEFT JOIN</b></code< <code> table2</code><br>
+	<code style="color:red; background-color:LightGray"><b>ON</b></code< <code>  table1.column_name = table2.column_name;</code>
+	</p>
+	
+	<p> In some databases LEFT JOIN is called LEFT OUTER JOIN.</p>
+
+<h3><code style="color:red; background-color:LightGray"><b>RIGHT (OUTER) JOIN</b></code>: Returns all records from the right table, and the matched records from the left table</h3>
+	<p>The <code style="color:red; background-color:LightGray"><b>RIGHT JOIN</b></code> keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>  table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>RIGHT JOIN</b></code> <code>  table2</code><br>
+	<code style="color:red; background-color:LightGray"><b>ON</b></code> <code>  table1.column_name = table2.column_name;</code>
+	</p>
+
+	<p>In some databases <code style="color:red; background-color:LightGray"><b>RIGHT JOIN</b</code> is called <code style="color:red; background-color:LightGray"><b>RIGHT OUTER JOIN</b></code>.</p>	
+
+<h3><code style="color:red; background-color:LightGray"><b>FULL (OUTER) JOIN</b></code>: Returns all records when there is a match in either left or right table</h3>
+	<p>The <code style="color:red; background-color:LightGray"><b>FULL OUTER JOIN</b></code> keyword returns all records when there is a match in left (table1) or right (table2) table records. <code style="color:red; background-color:LightGray"><b>FULL OUTER JOIN</b></code> and <code style="color:red; background-color:LightGray"><b>FULL JOIN</b></code> are the same.</p>
+	<p><code style="color:red; background-color:LightGray"><b>FULL OUTER JOIN</b></code> can potentially return very large result-sets.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>  table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>FULL OUTER JOIN</b></code> <code>  table2</code><br>
+	<code style="color:red; background-color:LightGray"><b>ON</b></code> <code>  table1.column_name = table2.column_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>  condition;</code>
+	</p>
+
+<h3>SELF Join</h3>
+	<p>A self join is a regular join, but the table is joined with itself.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table1 T1, table1 T2</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+
+<h1>UNION Operator</h1>
+	<p>The UNION operator is used to combine the result-set of two or more SELECT statements.</p>
+	<p>Every SELECT statement within UNION must have the same number of columns.</p>
+	<p>The columns must also have similar data types.</p>
+	<p>The columns in every SELECT statement must also be in the same order.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s) </code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>UNION</b></code><br> 
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>  column_name(s) </code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table2;</code>
+	</p>
+
+	<p>The <code style="color:red; background-color:LightGray"><b>UNION</b></code> operator selects only distinct values by default. To allow duplicate values, use <code style="color:red; background-color:LightGray"><b>UNION ALL</b.</code>.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s) </code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table1</code><br>
+	<code style="color:red; background-color:LightGray"><b>UNION ALL</b></code><br> 
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>  column_name(s) </code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table2;</code>
+	</p>
+
+<h1>GROUP BY Statement</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> statement groups rows that have the same values into summary rows, like "find the number of customers in each country".</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> statement is often used with aggregate functions (<code style="color:red; background-color:LightGray"><b>COUNT()</b></code>, <code style="color:red; background-color:LightGray"><b>MAX()</b></code>, <code style="color:red; background-color:LightGray"><b>MIN()</b></code>, <code style="color:red; background-color:LightGray"><b>SUM()</b></code>, <code style="color:red; background-color:LightGray"><b>AVG()</b></code>) to group the result-set by one or more columns.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition</code><br>
+	<code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code> <code> column_name(s);</code>
+	</p>
+
+<h1>HAVING Clause</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>HAVING</b></code> clause was added to SQL because the <code style="color:red; background-color:LightGray"><b>WHERE</b></code> keyword cannot be used with aggregate functions.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM </b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE </b></code> <code> condition</code><br>
+	<code style="color:red; background-color:LightGray"><b>GROUP BY </b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>HAVING </b></code> <code> condition</code><br>
+	<code style="color:red; background-color:LightGray"><b>ORDER BY </b></code> <code> column_name(s);</code>
+	</p>
+
+<h1>EXISTS Operator</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>EXISTS</b></code> operator is used to test for the existence of any record in a subquery.</p>
+	<p>The <code style="color:red; background-color:LightGray"><b>EXISTS</b></code> operator returns TRUE if the subquery returns one or more records.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>  table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE EXISTS</b></code><br>
+	(<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name</code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition);</code>
+	</p>
+
+<h1>ANY and ALL Operators</h1>
+	<p>The <code style="color:red; background-color:LightGray"><b>ANY</b></code> and <code style="color:red; background-color:LightGray"><b>ALL</b></code> operators allow you to perform a comparison between a single column value and a range of other values.</p>
+	
+<h2>ANY Operator</h2>
+	<p>The <code style="color:red; background-color:LightGray"><b>ANY</b></code>operator; returns a boolean value as a result; returns TRUE if ANY of the subquery values meet the condition.</p>
+	<p><code style="color:red; background-color:LightGray"><b>ANY</b></code> means that the condition will be true if the operation is true for any of the values in the range</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>  table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>  column_name operator</code> <code style="color:red; background-color:LightGray"><b>ANY
+	  (<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>  column_name</code><br>
+	  <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>  table_name</code><br>
+	  <code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>  condition);</code>
+	</p>
+
+<h2>ALL Operator</h2>
+	<p>The <code style="color:red; background-color:LightGray"><b>ALL</b></code> operator; returns a boolean value as a result; returns TRUE if ALL of the subquery values meet the condition; is used with <code style="color:red; background-color:LightGray"><b>SELECT</b></code>, <code style="color:red; background-color:LightGray"><b>WHERE</b></code> and <code style="color:red; background-color:LightGray"><b>HAVING</b></code> statements</p>
+	<p>ALL means that the condition will be true only if the operation is true for all values in the range.</p>
+	<p>Syntac with SELECT<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT ALL<b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
+	</p>
+	<p>Syntax with WHERE or HAVING<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> column_name operator <code style="color:red; background-color:LightGray"><b>ALL</b></code><br>
+	  (<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name</code><br>
+	  <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
+	  <code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition);</code>
+	</p>
+
+<h1>SELECT INTO Statement</h1>
+	<p>The SELECT INTO statement copies data from one table into a new table.</p>
+	<p>Syntax<br>
+	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> *</code><br>
+	<code style="color:red; background-color:LightGray"><b>INTO</b></code> <code> newtable</code> <code>[<code style="color:red; background-color:LightGray"><b>IN</b><code> externaldb]</code><br>
+	<code style="color:red; background-color:LightGray"><b>FROM oldtable
+	<code style="color:red; background-color:LightGray"><b>WHERE condition;
 
 
 </body>
