@@ -87,7 +87,8 @@
 	<li><code style="color:red; background-color:LightGray"><b>DROP INDEX</b></code> deletes an index</li>
 </ul>
 
-<h1>SQL SELECT Statement</h1>
+<button class="collapsible"><h1>SQL SELECT Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>SELECT</b></code> statement is used to select data from a database.</p>
 	<p>The data returned is stored in a result table, called the result-set.</p>
 
@@ -95,8 +96,10 @@
 	<p><code><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>column1 , column2</code><br><code><code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name;</code></p>
 	<p>In the example above column 1 and column 2 are the field names of the table you want to select data from. If you want to select all the field available in the table, use this syntax:<br><code style="color:red; background-color:LightGray"><b>SELECT</b></code> 
 	* <code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name;</code></p>
+</div>
 
-<h1>SQL SELECT DISTINCT Statement</h1>
+<button class="collapsible"><h1>SQL SELECT DISTINCT Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>SELECT DISTINCT</b></code> Statement statement is used to return only distinct (different) values.</p>
 	<p>Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.</p>
 
@@ -160,8 +163,10 @@
 		<td>To specify multiple possible values for a column</td>
 	</tr>
 </table>
-
-<h1>SQL AND, OR and NOT Operators</h1>
+</div>
+	
+<button class="collapsible"><h1>SQL AND, OR and NOT Operators</h1></button>
+<div class="content">	
 	<p>The <code style="color:red; background-color:LightGray"><b>WHERE</b></code> clause can be combined with <code style="color:red; background-color:LightGray"><b>AND</b></code>, <code style="color:red; background-color:LightGray"><b>OR</b></code>, and <code style="color:red; background-color:LightGray"><b>NOT</b></code> operators.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>AND</b></code> and <code style="color:red; background-color:LightGray"><b>OR</b></code> operators are used to filter records based on more than one condition:</p>
 		<ul>
@@ -187,8 +192,9 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code><code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code style="color:red; background-color:LightGray"><b>NOT</b></code> <code> condition1;</code> 
 	</p>
-
-<h1>ORDER BY Keyword</h1>
+</div>
+<button class="collapsible"><h1>ORDER BY Keyword</h1></button>
+<div class="content">
 	<p>The ORDER BY keyword is used to sort the result-set in ascending or descending order.</p>
 	<p>The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.</p>
 
@@ -209,8 +215,10 @@
 	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> * <code style="color:red; background-color:LightGray"><b>FROM</b></code><code> Customers</code><br>
 	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code><code> Country <code style="color:red; background-color:LightGray"><b>ASC</b></code>, <code>CustomerName</code> <code style="color:red; background-color:LightGray"><b>DESC</b></code>;
 	</p>
+</div>
 
-<h1>INSERT INTO Statement</h1>
+<button class="collapsible"><h1>INSERT INTO Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code> statement is used to insert new records in a table.</p>
 
 <h2>INSERT INTO Syntax</h2>
@@ -223,8 +231,10 @@
 	<p><code style="color:red; background-color:LightGray"><b>INSERT INTO</b></code><code> table_name<br>
 	The <code style="color:red; background-color:LightGray"><b>VALUES</b></code><code>(value1, value2, value3);</code>
 	</p>
-
-<h1>NULL Value</h1>
+</div>
+	
+<button class="collapsible"><h1>NULL Value</h1></button>
+<div class="content">
 	<p>A field with a NULL value is a field with no value.</p>
 	<p>If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field. Then, the field will be saved with a NULL value.</p>
 	<p>A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation.</p>
@@ -244,8 +254,10 @@
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code>column_name</code> <code style="color:red; background-color:LightGray"><b>IS NOT NULL</b></code><code>;</code>
 	</p>
 	<p>Always use IS NULL to look for NULL values.</p>
-
-<h1>UPDATE Statement</h1>
+</div>
+	
+<button class="collapsible"><h1>UPDATE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>UPDATE</b></code> statement is used to modify the existing records in a table.</p>
 	<p>UPDATE Syntax Example:<br>
 	<code style="color:red; background-color:LightGray"><b>UPDATE</b></code><code> table name</code><br>
@@ -253,8 +265,10 @@
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code><code> condition;</code>
 	</p>
 	<p>Be aware if you omit the WHERE clause, all records in the table will be updated!</p>
-
-<h1>DELETE Statement</h1>
+</div>
+	
+<button class="collapsible"><h1>DELETE Statement</h1></button>
+<div class="content">
 	<p>The DELETE statement is used to delete existing records in a table.</p>
 	<p>DELETE Syntax Example:<br>
 	<code style="color:red; background-color:LightGray"><b>DELETE FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>where</b></code><code> condition:</code>
@@ -262,8 +276,10 @@
 	<p>It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:<br>
 	<code style="color:red; background-color:LightGray"><b>DELETE FROM</b></code><code> table name;</code>
 	</p>
-
-<h1>SELECT TOP Clause</h1>
+</div>
+	
+<button class="collapsible"><h1>SELECT TOP Clause</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>SELECT TOP</b></code> clause is used to specify the number of records to return.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>SELECT TOP</b></code> clause is useful on large tables with thousands of records, because returning a large number of records can impact performance.</p>
 	<p>Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses FETCH FIRST n ROWS ONLY and ROWNUM.</p>
@@ -301,8 +317,10 @@
 		<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code>(<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>ORDER BY</b></code> <code> column_name(s))</code><br>
 		<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> ROWNUM <= number;</code>
 		<p>
-
-<h1>MIN() and MAX() Fucntions</h1>
+</div>
+			
+<button class="collapsible"><h1>MIN() and MAX() Fucntions</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>MIN()</b></code> function returns the smallest value of the selected column.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>MAX()</b></code> function returns the largest value of the selected column.</p>
 
@@ -318,8 +336,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
 	</p>
-
-<h1>COUNT(), AVG() and SUM() Functions</h1>
+</div>
+			
+<button class="collapsible"><h1>COUNT(), AVG() and SUM() Functions</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>COUNT()</b></code> function returns the number of rows that matches a specified criterion.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>AVG()</b></code> function returns the average value of a numeric column. </p>
 	<p>The <code style="color:red; background-color:LightGray"><b>SUM()</b></code> function returns the total sum of a numeric column. </p>
@@ -342,8 +362,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br> 
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;
 	</p>
+</div>
 
-<h1>LIKE Operator</h1>
+<button class="collapsible"><h1>LIKE Operator</h1></button>
+<div class="content">
 	<p>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
 	<p>There are two wildcards often used in conjunction with the LIKE operator: the percent sign (%) represents zero, one, or multiple characters, the underscore sign (_) represents one, single character</p>
 	<p>MS Access uses an asterisk (*) instead of the percent sign (%), and a question mark (?) instead of the underscore (_).</p>
@@ -391,8 +413,10 @@
 			<td>Finds any values that start with "a" and ends with "o"</td>
 		</tr>
 	</table>
+</div>
 
-<h1>Wildcards</h1>
+<button class="collapsible"><h1>Wildcards</h1></button>
+<div class="content">
 	<p>A wildcard character is used to substitute one or more characters in a string.</p>
 	<p>Wildcard characters are used with the LIKE operator. The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</p>
 
@@ -454,8 +478,9 @@
 			<td>Represents any single character within the specified range</td>
 		</tr>
 	</table>
-
-<h1>IN Operator</h1>
+</div>
+<button class="collapsible"><h1>IN Operator</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>IN</b></code> operator allows you to specify multiple values in a <code style="color:red; background-color:LightGray"><b>WHERE</b></code> clause.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>IN</b></code> operator is a shorthand for multiple <code style="color:red; background-color:LightGray"><b>OR</b></code> conditions.</p>
 
@@ -470,8 +495,9 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code?column_name</code> <code style="color:red; background-color:LightGray"><b>IN</b></code> <code> (<code style="color:red; background-color:LightGray"><b>SELECT</b></code> STATEMENT);</code>
 	</p>
-
-<h1>BETWEEN Operator</h1>
+</div>
+<button class="collapsible"><h1>BETWEEN Operator</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> operator selects values within a given range.</p>
 	<p>The values can be numbers, text, or dates.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> operator is inclusive: begin and end values are included.</p>
@@ -481,8 +507,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> column_name</code> <code style="color:red; background-color:LightGray"><b>BETWEEN</b></code> <code> value1</code> <code style="color:red; background-color:LightGray"><b>AND</b></code> <code> value2;</code>
 	</p>
-
-<h1>Aliases</h1>
+</div>
+			
+<button class="collapsible"><h1>Aliases</h1></button>
+<div class="content">
 	<p>SQL aliases are used to give a table, or a column in a table, a temporary name.</p>
 	<p>Aliases are often used to make column names more readable.</p>
 	<p>An alias only exists for the duration of that query.</p>
@@ -497,8 +525,10 @@
 	<p><code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>AS</b></code> <code> alias_name;</code>
 	</p>
-
-<h1>Joins</h1>
+</div>
+			
+<button class="collapsible"><h1>Joins</h1></button>
+<div class="content">
 	<p>A <code style="color:red; background-color:LightGray"><b>JOIN</b></code> clause is used to combine rows from two or more tables, based on a related column between them.</p>
 
 <h2>There are different Types of JOINs</h2>
@@ -552,8 +582,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table1 T1, table1 T2</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
 	</p>
+</div>
 
-<h1>UNION Operator</h1>
+<button class="collapsible"><h1>UNION Operator</h1></button>
+<div class="content">
 	<p>The UNION operator is used to combine the result-set of two or more SELECT statements.</p>
 	<p>Every SELECT statement within UNION must have the same number of columns.</p>
 	<p>The columns must also have similar data types.</p>
@@ -570,8 +602,10 @@
 	<code style="color:red; background-color:LightGray"><b>UNION ALL</b></code><br> 
 	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code>  column_name(s) </code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table2;</code>
 	</p>
-
-<h1>GROUP BY Statement</h1>
+</div>
+			
+<button class="collapsible"><h1>GROUP BY Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> statement groups rows that have the same values into summary rows, like "find the number of customers in each country".</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> statement is often used with aggregate functions (<code style="color:red; background-color:LightGray"><b>COUNT()</b></code>, <code style="color:red; background-color:LightGray"><b>MAX()</b></code>, <code style="color:red; background-color:LightGray"><b>MIN()</b></code>, <code style="color:red; background-color:LightGray"><b>SUM()</b></code>, <code style="color:red; background-color:LightGray"><b>AVG()</b></code>) to group the result-set by one or more columns.</p>
 	<p>Syntax<br>
@@ -581,8 +615,10 @@
 	<code style="color:red; background-color:LightGray"><b>GROUP BY</b></code> <code> column_name(s)</code><br>
 	<code style="color:red; background-color:LightGray"><b>ORDER BY</b></code> <code> column_name(s);</code>
 	</p>
-
-<h1>HAVING Clause</h1>
+</div>
+			
+<button class="collapsible"><h1>HAVING Clause</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>HAVING</b></code> clause was added to SQL because the <code style="color:red; background-color:LightGray"><b>WHERE</b></code> keyword cannot be used with aggregate functions.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name(s)</code><br>
@@ -592,8 +628,10 @@
 	<code style="color:red; background-color:LightGray"><b>HAVING </b></code> <code> condition</code><br>
 	<code style="color:red; background-color:LightGray"><b>ORDER BY </b></code> <code> column_name(s);</code>
 	</p>
-
-<h1>EXISTS Operator</h1>
+</div>
+			
+<button class="collapsible"><h1>EXISTS Operator</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>EXISTS</b></code> operator is used to test for the existence of any record in a subquery.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>EXISTS</b></code> operator returns TRUE if the subquery returns one or more records.</p>
 	<p>Syntax<br>
@@ -602,8 +640,10 @@
 	<code style="color:red; background-color:LightGray"><b>WHERE EXISTS</b></code><br>
 	(<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> column_name</code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code> <code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition);</code>
 	</p>
-
-<h1>ANY and ALL Operators</h1>
+</div>
+			
+<button class="collapsible"><h1>ANY and ALL Operators</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>ANY</b></code> and <code style="color:red; background-color:LightGray"><b>ALL</b></code> operators allow you to perform a comparison between a single column value and a range of other values.</p>
 	
 <h2>ANY Operator</h2>
@@ -634,8 +674,10 @@
 	  <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
 	  <code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition);</code>
 	</p>
-
-<h1>SELECT INTO Statement</h1>
+</div>
+			
+<button class="collapsible"><h1>SELECT INTO Statement</h1></button>
+<div class="content">
 	<p>The SELECT INTO statement copies data from one table into a new table.</p>
 	<p>Syntax (to copy all columns into a new table)<br>
 	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> *</code><br>
@@ -649,8 +691,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> oldtable</code><br>
 	<code style="color:red; background-color:LightGray"><b>HERE</b></code> <code> condition;</code>
 	</p>
-
-<h1>INSERT INTO SELECT Statement</h1>
+</div>
+			
+<button class="collapsible"><h1>INSERT INTO SELECT Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>INSERT INTO SELECT</b></code> statement copies data from one table and inserts it into another table.</p>
 	<p>The <code style="color:red; background-color:LightGray"><b>INSERT INTO SELECT</b></code> statement requires that the data types in source and target tables match. The existing records in the target table are unaffected.</p>
 	<p>Syntax (Copy all columns from one table to another)<br>
@@ -663,8 +707,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table1</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
 	</p>
-
-<h1>CASE Statement</h1>
+</div>
+			
+<button class="collapsible"><h1>CASE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>CASE</b></code> statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.</p>
 	<p>If there is no <code style="color:red; background-color:LightGray"><b>ELSE</b></code> part and no conditions are true, it returns NULL.</p>
 	<p>Syntax<br>
@@ -675,8 +721,10 @@
 	    <code style="color:red; background-color:LightGray"><b>ELSE</b></code> <code> result</code><br>
 	<code style="color:red; background-color:LightGray"><b>END;</b></code> 
 	</p>
-
-<h1>IFNULL(), ISNULL(), COALESCE(), and NVL() Functions</h1>
+</div>
+			
+<button class="collapsible"><h1>IFNULL(), ISNULL(), COALESCE(), and NVL() Functions</h1></button>
+<div class="content">
 	<h2>MySQL</h2>
 	<p>The MySQL <code style="color:red; background-color:LightGray"><b>IFNULL()</b></code> function lets you return an alternative value if an expression is NULL or use the <code style="color:red; background-color:LightGray"><b>COALESCE()</b></code> function</p>
 	<h2>SQL Server</h2>
@@ -685,8 +733,10 @@
 	<p>The MS Access <code style="color:red; background-color:LightGray"><b>IsNull()</b></code> function returns TRUE (-1) if the expression is a null value, otherwise FALSE (0)</p>
 	<h2>Oracle</h2>
 	<p>The Oracle <code style="color:red; background-color:LightGray"><b>NVL()</b></code> function achieves the same result or use the <code style="color:red; background-color:LightGray"><b>COALESCE()</b></code> function</p>
-
-<h1>Stored Procedures</h1>
+</div>
+			
+<button class="collapsible"><h1>Stored Procedures</h1></button>
+<div class="content">
 	<p>A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.</p>
 	<p>So if you have an SQL query that you write over and over again, save it as a stored procedure, and then just call it to execute it.</p>
 	<p>You can also pass parameters to a stored procedure, so that the stored procedure can act based on the parameter value(s) that is passed.</p>
@@ -699,8 +749,10 @@
 	<p>Execute Stored Procedure Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>EXEC</b></code> <code> procedure_name;</code>
 	</p>
-
-<h1>Comments</h1>
+</div>
+			
+<button class="collapsible"><h1>Comments</h1></button>
+<div class="content">
 	<p>Comments are used to explain sections of SQL statements, or to prevent execution of SQL statements.</p>
 
 <h2>Single Line Comments</h2>
@@ -719,8 +771,10 @@
 	<code> in the Customers table:*/</code><br>
 	<code style="color:red; background-color:LightGray"><b>SELECT</b></code> <code> *</code> <code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> Customers;</code>
 	</p>
-
-<h1>Operators</h1>
+</div>
+			
+<button class="collapsible"><h1>Operators</h1></button>
+<div class="content">
 
 <h2>Arithmetic</h2>
 	<table>
@@ -874,20 +928,26 @@
 			<td>TRUE if any of the subquery values meet the condition</td>	
 		</tr>
 	</table>
-
-<h1>CREATE DATABASE Statement</h1>
+</div>
+			
+<button class="collapsible"><h1>CREATE DATABASE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>CREATE DATABASE</b></code> statement is used to create a new SQL database.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>CREATE DATABASE</b></code> <code> databasename;</code>
 	</p>
-
-<h1>DROP DATABASE Statement</h1>
+</div>
+	
+<button class="collapsible"><h1>DROP DATABASE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>DROP DATABASE</b></code> statement is used to drop an existing SQL database.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-DROP DATABASE</b></code> <code> databasename;</code>
 	</p>
-
-<h1>BACKUP DATABASE</h1>
+</div>
+		     
+<button class="collapsible"><h1>BACKUP DATABASE</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>BACKUP DATABASE</b></code> statement is used in SQL Server to create a full back up of an existing SQL database.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>BACKUP DATABASE</b></code> <code> databasename</code><br>
@@ -898,8 +958,10 @@
 	<code style="color:red; background-color:LightGray"><b>TO DISK</b></code< <code> = 'filepath';</code><br>
 	<code style="color:red; background-color:LightGray"><b>WITH</b></code> <code> DIFFERETIAL;</code<
 	</p>
-	
-<h1>CREATE TABLE Statement</h1>
+</div>
+							   
+<button class="collapsible"><h1>CREATE TABLE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>CREATE TABLE</b></code> statement is used to create a new table in a database.</p>
 	<p>The column parameters specify the names of the columns of the table.</p>
 	<p>The datatype parameter specifies the type of data the column can hold (varchar, integer, date, etc.).</p>
@@ -919,8 +981,10 @@
     	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> existing_table_name</code><br>
     	<code style="color:red; background-color:LightGray"><b>WHERE</b></code><code>;</code>
 	</p>
-
-<h1>DROP TABLE Statement</h1>
+</div>
+							   
+<button class="collapsible"><h1>DROP TABLE Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>DROP TABLE</b></code> statement is used to drop and existing tbale ina database</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>DROP TABLE</b></code> <code> table_name;</code>
@@ -929,8 +993,10 @@
 	Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>TRUNCATE TABLE</b></code> <code> table_names;</code>
 	</p>
-
-<h1>ALTER TABLE</h1>
+</div>
+							   
+<button class="collapsible"><h1>ALTER TABLE</h1></button>
+<div class="content">
 	<p>The ALTER TABLE statement is used to add, delete, or modify columns in an existing table and also used to add and drop various constraints on an existing table.</p>
 	<p>ADD Column Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> <code> table_name</code><br>
@@ -950,8 +1016,10 @@
 	<code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> <code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>MODIFY</b></code> <code> column_name datatype;</code>
 	</p>
-
-<h1>Create Contraints</h1>
+</div>
+							   
+<button class="collapsible"><h1>Create Contraints</h1></button>
+<div class="content">
 	<p>Constraints can be specified when the table is created with the <code style="color:red; background-color:LightGray"><b>CREATE TABLE</b></code> statement, or after the table is created with the <code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> statement.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>CREATE TABLE</b></code> <code> table_name (</code><br>
@@ -971,12 +1039,16 @@
 	<code style="color:red; background-color:LightGray"><b>DEFAULT</b></code> - Sets a default value for a column if no value is specified<br>
 	<code style="color:red; background-color:LightGray"><b>CREATE INDEX</b></code> - Used to create and retrieve data from the database very quickly<br>
 	</p>
-
-<h1>NOT NULL Constraint</h1>
+</div>
+							   
+<button class="collapsible"><h1>NOT NULL Constraint</h1></button>
+<div class="content">
 	<p>By default, a column can hold NULL values.The NOT NULL constraint enforces a column to NOT accept NULL values.</p>
 	<p>This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.</p>
-
-<h1>UNIQUE Contraint</h1>
+</div>
+		    
+<button class="collapsible"><h1>UNIQUE Contraint</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>UNIQUE</b></code> constraint ensures that all values in a column are different.</p>
 	<p>Both the <code style="color:red; background-color:LightGray"><b>UNIQUE</b></code> and <code style="color:red; background-color:LightGray"><b>PRIMARY KEY</b></code> constraints provide a guarantee for uniqueness for a column or set of columns.</p>
 	<p>A <code style="color:red; background-color:LightGray"><b>PRIMARY KEY</b></code> constraint automatically has a <code style="color:red; background-color:LightGray"><b>UNIQUE</b></code> constraint.</p>
@@ -1034,8 +1106,10 @@
 	<code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> <code> Persons</code><br>
 	<code style="color:red; background-color:LightGray"><b>DROP CONSTRAINT</b></code> <code> UC_Person;</code>
 	</p>
-
-<h1>PRIMARY KEY Constraint</h1>
+</div>
+							   
+<button class="collapsible"><h1>PRIMARY KEY Constraint</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>PRIMARY KEY</b></code> constraint uniquely identifies each record in a table.</p>
 	<p>Primary keys must contain UNIQUE values, and cannot contain NULL values.</p>
 	<p>A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns fields.</p>
@@ -1087,34 +1161,44 @@
 	<code style="color:red; background-color:LightGray"><b>ALTER TABLE</b></code> <code> Persons</code><br>
 	<code style="color:red; background-color:LightGray"><b>DROP CONSTRAINT</b></code> <code> PK_Person;</code>
 	</p>
-
-<h1>FOREIGN KEY Constraint</h1>
+</div>
+							   
+<button class="collapsible"><h1>FOREIGN KEY Constraint</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>FOREIGN KEY</b></code> constraint is used to prevent actions that would destroy links between tables.</p>
 	<p>A <code style="color:red; background-color:LightGray"><b>FOREIGN KEY</b></code> is a field (or collection of fields) in one table, that refers to the <code style="color:red; background-color:LightGray"><b>PRIMARY KEY</b></code> in another table.</p>
 	<p>The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.</p>
+</div>
 
-<h1>CHECK Constraint</h1>
+<button class="collapsible"><h1>CHECK Constraint</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>CHECK</b></code> constraint is used to limit the value range that can be placed in a column.</p>
 	<p>If you define a <code style="color:red; background-color:LightGray"><b>CHECK</b></code> constraint on a column it will allow only certain values for this column.</p>
 	<p>If you define a <code style="color:red; background-color:LightGray"><b>CHECK</b></code> constraint on a table it can limit the values in certain columns based on values in other columns in the row.</p>
-
-<h1>DEFAULT Constraint</h1>
+</div>
+									      
+<button class="collapsible"><h1>DEFAULT Constraint</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>DEFAULT</b></code> constraint is used to set a default value for a column.</p>
 	<p>The default value will be added to all new records, if no other value is specified.</p>
-
-<h1>CREATE INDEX Statement</h1>
+</div>
+								  
+<button class="collapsible"><h1>CREATE INDEX Statement</h1></button>
+<div class="content">
 	<p>The <code style="color:red; background-color:LightGray"><b>CREATE INDEX</b></code> statement is used to create indexes in tables.</p>
 	<p>Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.</p>
 	<p>Syntax<br>
 	<code style="color:red; background-color:LightGray"><b>CREATE INDEX</b></code> <code> index_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>ON</b></code> <code> table_name (column1, column2);</code>
 	</p>
-
-<h1>AUTO INCREMENT Field</h1>
+</div>
+							   
+<button class="collapsible"><h1>AUTO INCREMENT Field</h1></button>
+<div class="content">
 	<p>Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.</p>
 	<p>Often this is the primary key field that we would like to be created automatically every time a new record is inserted.</p>
 
-<h1>Dates</h1>
+<button class="collapsible"><h1>Dates</h1>
 	<p>The most difficult part when working with dates is to be sure that the format of the date you are trying to insert, matches the format of the date column in the database.</p>
 	<p>As long as your data contains only the date portion, your queries will work as expected. However, if a time portion is involved, it gets more complicated.</p>
 
@@ -1131,8 +1215,10 @@
 	<code style="color:red; background-color:LightGray"><b>SMALLDATETIME</b></code>  - format: YYYY-MM-DD HH:MI:SS
 	<code style="color:red; background-color:LightGray"><b>TIMESTAMP</b></code>  - format: a unique number
 	</p>
-
-<h1>CREATE VIEW Statement</h1>
+</div>
+							   
+<button class="collapsible"><h1>CREATE VIEW Statement</h1></button>
+<div class="content">
 	<p>In SQL, a view is a virtual table based on the result-set of an SQL statement.</p>
 	<p>A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.</p>
 	<p>You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.</p>
@@ -1143,8 +1229,10 @@
 	<code style="color:red; background-color:LightGray"><b>FROM</b></code> <code> table_name</code><br>
 	<code style="color:red; background-color:LightGray"><b>WHERE</b></code> <code> condition;</code>
 	</p>
-
-<h1>Injection</h1>
+</div>
+							   
+<button class="collapsible"><h1>Injection</h1></button>
+<div class="content">
 	<p>A code injection technique that might destroy your database.</p>
 	<p>One of the most common web hacking techniques.</p>
 	<p>is the placement of malicious code in SQL statements, via web page input.</p>
@@ -1196,8 +1284,10 @@
 	$stmt->bindParam(':cit', $txtCit);<br>
 	$stmt->execute();</code>
 	<p>
-
-<h1>Hosting</h1>
+</div>
+	
+<button class="collapsible"><h1>Hosting</h1></button>
+<div class="content">
 
 <h2>SQL Hosting</h2>
 	<p>If you want your web site to be able to store and retrieve data from a database, your web server should have access to a database-system that uses the SQL language.</p>
@@ -1220,12 +1310,16 @@
 <h2>MS Access</h2>
 	<p>When a web site requires only a simple database, Microsoft Access can be a solution.</p>
 	<p>MS Access is not well suited for very high-traffic, and not as powerful as MySQL, SQL Server, or Oracle.</p>
-
-<h1>Data Types for MySQL, SQL Server, and MS Access</h1>
+</div>
+	
+<button class="collapsible"><h1>Data Types for MySQL, SQL Server, and MS Access</h1></button>
+<div class="content">
 	<p>The data type of a column defines what value the column can hold: integer, character, money, date and time, binary, and so on.</p>
 	<p>Check out <a href="https://www.w3schools.com/sql/sql_datatypes.asp">W3 School SQL Data Types Tables</a>
-
-<h1>Check out other References from W3 Schools</h1>
+</div>
+	
+<button class="collapsible"><h1>Check out other References from W3 Schools</h1></button>
+<div class="content">
 	<ul>
 		<li><a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">SQL Keywords</a></li>
 		<li><a href="https://www.w3schools.com/sql/sql_ref_mysql.asp">MySQL Functions</a></li>
@@ -1233,7 +1327,7 @@
 		<li><a href="https://www.w3schools.com/sql/sql_ref_msaccess.asp">MS Access Functions</a></li>
 		<li><a href="https://www.w3schools.com/sql/sql_quickref.asp">SQL Quick Reference</a></li>
 	</ul>
-
+</div>
 </body>
 <script src="collapsible.js" type="text/JavaScript"></script>
 </html>
